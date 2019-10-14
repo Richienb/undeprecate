@@ -1,21 +1,21 @@
-# Typescript QuickStart [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/typescript-quickstart/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/typescript-quickstart)
+# Undeprecate [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/undeprecate/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/undeprecate)
 
-A quick start template for Typescript.
+Undeprecate javascript features using shims. Useful for legacy applications.
 
-[![NPM](https://nodei.co/npm/typescript-quickstart.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/typescript-quickstart)
+[![NPM](https://nodei.co/npm/undeprecate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/undeprecate)
 
 ## Importing
 
 From your NodeJS application:
 
 ```js
-const { TypeScriptQuickStart } = require("typescript-quickstart");
+const { TypeScriptQuickStart } = require("undeprecate");
 ```
 
 From your web application:
 
 ```html
-<script src="https://unpkg.com/typescript-quickstart/dist/index.min.js"></script>
+<script src="https://unpkg.com/undeprecate/dist/index.min.js"></script>
 ```
 
 ## Initialisation
@@ -26,6 +26,4 @@ const TypeScriptQuickStart = new TypeScriptQuickStart();
 
 ## Usage
 
-Read the [documentation](https://richienb.github.io/typescript-quickstart).
-
-> The typescript-quickstart npm module is not maintained by this project.
+Read the [documentation](https://richienb.github.io/undeprecate).

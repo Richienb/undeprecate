@@ -24,15 +24,132 @@
  * SOFTWARE.
  */
 
-/**
- * A quick start template for Typescript.
- */
-export class TypeScriptQuickStart {
-    /**
-     * Your first method.
-     * @param text The text to return
-    */
-    public helloWorld(text: string = ""): string {
-        return text
-    }
+import "core-js"
+import _ from "lodash"
+
+// Number
+
+declare namespace Number {
+    let toInteger: (x: number) => number
 }
+
+Number.toInteger = Math.trunc
+
+// Date
+
+import dayjs from "dayjs"
+
+declare class Date {
+    getYear(): number
+    setYear(yearValue: number): number
+
+    toGMTString(): string
+
+    toLocaleFormat(format: string): string
+}
+
+Date.prototype.getYear = function(): number {
+    return this.getFullYear() - 1900
+}
+Date.prototype.setYear = function(yearValue: number): number {
+    if (yearValue >= 0 && yearValue <= 99) this.setFullYear(1900 + yearValue)
+    else this.setFullYear(yearValue)
+    return this.getTime()
+}
+Date.prototype.toGMTString = function(): string {
+    return this.toUTCString()
+}
+Date.prototype.toLocaleFormat = function(format: string): string {
+    return dayjs(this).format(format)
+}
+
+// Globals
+
+globalThis.encode = encodeURIComponent
+globalThis.decode = decodeURIComponent
+
+// String
+
+declare class String {
+    anchor: (name: string) => string;
+    big: () => string;
+    blink: () => string;
+    bold: () => string;
+    fixed: () => string;
+    fontcolor: (color: string) => string;
+    italics: () => string;
+    link: (link: string) => string;
+    small: () => string;
+    strike: () => string;
+    sub: () => string;
+    sup: () => string;
+    quote(): string
+
+    substr: (...args: any) => any
+}
+
+// - HTML wrapper methods
+
+const encloseTags = (str: string, tagname: string): string => `<${tagname}>${str}</${tagname}>`
+
+String.prototype.anchor = function(name: string): string {
+    return `<a name="${name}">${this}</a>`
+}
+String.prototype.big = function(): string {
+    return encloseTags(this, "big")
+}
+String.prototype.blink = function(): string {
+    return encloseTags(this, "blink")
+}
+String.prototype.bold = function(): string {
+    return encloseTags(this, "bold")
+}
+String.prototype.fixed = function(): string {
+    return encloseTags(this, "tt")
+}
+String.prototype.fontcolor = function(color: string): string {
+    return `<font color="${color}">${this}</font>`
+}
+String.prototype.italics = function(): string {
+    return encloseTags(this, "i")
+}
+String.prototype.link = function(link: string): string {
+    return `<a href="${link}">${this}</a>`
+}
+String.prototype.small = function(): string {
+    return encloseTags(this, "small")
+}
+String.prototype.strike = function(): string {
+    return encloseTags(this, "strike")
+}
+String.prototype.sub = function(): string {
+    return encloseTags(this, "sub")
+}
+String.prototype.sup = function(): string {
+    return encloseTags(this, "sup")
+}
+
+// - Other
+
+String.prototype.quote = function(): string {
+    return JSON.stringify(this)
+}
+String.prototype.substr = function(...args: any): string {
+    return this.slice(...args)
+}
+
+// Function
+
+declare namespace Function {
+    let arity: (func: Function) => number
+}
+
+Function.arity = (func: Function): number => func.length
+
+// Object
+
+Object.defineProperty(Object.prototype, "__count__", {
+    get: function() {
+        return _.size(this)
+    },
+})
