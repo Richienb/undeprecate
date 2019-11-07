@@ -22,7 +22,7 @@
         "lint": "eslint src --ext .ts"
     },
     "devDependencies": {
-        "@types/lodash": "^4.14.144",
+        "@types/lodash": "^4.14.145",
         "eslint": "^6.6.0",
         "eslint-config-richienb": "^0.2.2",
         "microbundle": "^0.11.0",
