@@ -782,10 +782,10 @@ convert-source-map@^1.1.0:
   dependencies:
     safe-buffer "~5.1.1"
 
-core-js-pure@^3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.3.6.tgz#4c2378184acd8485a83ca9fdea201b844c554165"
-  integrity sha512-Ynx7lkSF3M2e2+DQMXUZgUP6hTspBm+oZyhePwYQ7phSXGIsHiyKXj3BJ8FBvb0mEP3vzDzAMiVZTRXN5z7pvA==
+core-js-pure@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.4.0.tgz#a0e89ce3f8142512b784a3c9f85839730acd8203"
+  integrity sha512-d49s6GiW3ePYM8vCglfLLo6bueYx+Sff6MYtjohTMSB0AoxVfABXMUSmYHtKAEvW77T9JTKMyHrhE20nZ8gYDA==
 
 core-js@^2.6.5:
   version "2.6.10"
