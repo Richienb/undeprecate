@@ -33,7 +33,7 @@
         "microbundle/rollup-plugin-postcss/cssnano/postcss-svgo/svgo/js-yaml": "^3.13.1"
     },
     "dependencies": {
-        "core-js": "^3.3.6",
+        "core-js": "^3.4.0",
         "core-js-pure": "^3.3.6",
         "dayjs": "^1.8.17",
         "lodash": "^4.17.15"
