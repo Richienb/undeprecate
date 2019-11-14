@@ -26,7 +26,7 @@
         "eslint": "^6.6.0",
         "eslint-config-richienb": "^0.2.3",
         "microbundle": "^0.11.0",
-        "typedoc": "^0.15.0"
+        "typedoc": "^0.15.1"
     },
     "resolutions": {
         "microbundle/rollup-plugin-typescript2/rollup-pluginutils/micromatch/braces": "^3.0.2",
